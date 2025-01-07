@@ -3,18 +3,17 @@ import { computed, shallowRef } from 'vue';
 import { Badge, BadgeGroup, DataTable } from 'wangsvue';
 import {
   FetchResponse,
-  QueryParams,
   TableCellComponent,
   TableColumn,
 } from 'wangsvue/components/datatable/DataTable.vue.d';
 import { MenuItem } from 'wangsvue/components/menuitem';
-import { MemberServices } from 'wangsit-api-services';
-import { Member } from 'wangsit-api-services/src/types/memberService.type';
+import { Member } from '@/types/member.type';
 import router from '@/router';
 import DialogDeleteUser from './DialogDeleteUser/DialogDeleteUser.vue';
 import ExampleModuleTableFilter from './ExampleModuleTableFilter.vue';
 import ExampleModuleHeader from './ExampleModuleHeader.vue';
 import ExampleModuleQuickFilter from './ExampleModuleQuickFilter.vue';
+import response from './exampleResponse.json';
 
 const selectedUser = shallowRef<Member>();
 const showDeleteUserDialog = shallowRef(false);
@@ -78,11 +77,9 @@ const tableColumns = computed<TableColumn[]>(() => {
   ];
 });
 
-const getTableData = async (
-  params: QueryParams,
-): Promise<FetchResponse<Member> | undefined> => {
+const getTableData = async (): Promise<FetchResponse<Member> | undefined> => {
   try {
-    const { data } = await MemberServices.getMembers(params);
+    const data = response;
 
     return data;
   } catch (error) {
