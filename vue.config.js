@@ -1,7 +1,8 @@
-import { defineConfig } from '@vue/cli-service';
-import { resolve } from 'path';
+/* eslint-disable @typescript-eslint/no-require-imports */
+const { defineConfig } = require('@vue/cli-service');
+const { resolve } = require('path');
 
-export default defineConfig({
+module.exports = defineConfig({
   transpileDependencies: true,
   configureWebpack: {
     output: {
