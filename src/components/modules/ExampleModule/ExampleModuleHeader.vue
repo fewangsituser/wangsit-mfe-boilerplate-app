@@ -7,7 +7,7 @@ import {
   ButtonFilter,
   ButtonSearch,
 } from 'wangsvue';
-import { Member } from 'wangsit-api-services/src/types/memberService.type';
+import { Member } from '@/types/member.type';
 import DialogDeleteUser from './DialogDeleteUser/DialogDeleteUser.vue';
 
 const dataSelected = ref<Member[]>([]);

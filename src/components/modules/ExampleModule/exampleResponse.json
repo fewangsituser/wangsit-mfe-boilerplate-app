@@ -1,0 +1,19 @@
+{
+  "status": 200,
+  "message": "Successfully get member list",
+  "data": {
+    "totalRecords": 112,
+    "data": [
+      {
+        "_id": "675c1c9563710519e9e9bfa8",
+        "key": 36,
+        "profilePictureBig": "/members/1735785084341-big.webp",
+        "profilePictureMedium": "/members/1735785084341-medium.webp",
+        "profilePictureSmall": "/members/1735785084341-small.webp",
+        "nickName": "BE1",
+        "teams": ["BE", "UIUX", "QC", "MOB", "FE", "DEV", "TW", "IOT"],
+        "email": "be1@mailnesia.com"
+      }
+    ]
+  }
+}
