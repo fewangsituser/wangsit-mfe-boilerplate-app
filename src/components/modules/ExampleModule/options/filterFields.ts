@@ -1,7 +1,7 @@
-import { GetOptionsParams } from '@/dto/user.dto';
 import { FilterField } from 'wangsvue/components/filtercontainer/FilterContainer.vue.d';
+import { QueryParams } from 'wangsvue/components/datatable/DataTable.vue';
 import { MultiSelectOption } from 'wangsvue/types/options.type';
-import UserServices from '@/services/example.service';
+import { MemberServices } from 'wangsit-api-services';
 
 export const quickFilterFields: FilterField[] = [
   {
@@ -10,10 +10,10 @@ export const quickFilterFields: FilterField[] = [
     type: 'multiselect',
     placeholder: 'Select country',
     fetchOptionFn: async (
-      params: GetOptionsParams,
+      params: QueryParams,
     ): Promise<MultiSelectOption[]> => {
       try {
-        const { data } = await UserServices.getOptions(params);
+        const { data } = await MemberServices.getMemberOptions(params);
         return data.data.country;
       } catch (error) {
         console.error(error);
@@ -36,10 +36,10 @@ export const filterFields: FilterField[] = [
     type: 'multiselect',
     placeholder: 'Select country',
     fetchOptionFn: async (
-      params: GetOptionsParams,
+      params: QueryParams,
     ): Promise<MultiSelectOption[]> => {
       try {
-        const { data } = await UserServices.getOptions(params);
+        const { data } = await MemberServices.getMemberOptions(params);
         return data.data.country;
       } catch (error) {
         console.error(error);

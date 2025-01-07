@@ -1,5 +1,5 @@
 import { App } from 'vue';
-import { Tooltip, WangsVue, ToastService } from 'wangsvue';
+import { Tooltip, WangsVue, ToastService, Focus } from 'wangsvue';
 import Preset from 'wangsvue-presets/wangsvue';
 
 import router from '@/router';
@@ -20,6 +20,7 @@ const registerComponents = (app: App): void => {
   app.use(ToastService);
 
   app.directive('Tooltip', Tooltip);
+  app.directive('focus', Focus);
 };
 
 export default registerComponents;

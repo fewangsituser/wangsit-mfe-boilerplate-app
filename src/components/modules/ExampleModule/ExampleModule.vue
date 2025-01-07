@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue';
-import { User } from '@/types/user.type';
 import { Badge, BadgeGroup, DataTable } from 'wangsvue';
 import {
   FetchResponse,
@@ -9,14 +8,15 @@ import {
   TableColumn,
 } from 'wangsvue/components/datatable/DataTable.vue.d';
 import { MenuItem } from 'wangsvue/components/menuitem';
+import { MemberServices } from 'wangsit-api-services';
+import { Member } from 'wangsit-api-services/src/types/memberService.type';
 import router from '@/router';
-import UserServices from '@/services/example.service';
 import DialogDeleteUser from './DialogDeleteUser/DialogDeleteUser.vue';
 import ExampleModuleTableFilter from './ExampleModuleTableFilter.vue';
 import ExampleModuleHeader from './ExampleModuleHeader.vue';
 import ExampleModuleQuickFilter from './ExampleModuleQuickFilter.vue';
 
-const selectedUser = shallowRef<User>();
+const selectedUser = shallowRef<Member>();
 const showDeleteUserDialog = shallowRef(false);
 
 const singleAction: MenuItem[] = [
@@ -40,24 +40,19 @@ const singleAction: MenuItem[] = [
 const tableColumns = computed<TableColumn[]>(() => {
   return [
     {
-      field: 'name',
+      field: 'nickName',
       header: 'Name',
       sortable: true,
       reorderable: false,
       fixed: true,
-      bodyComponent: (data: User): TableCellComponent => {
+      bodyComponent: (data: Member): TableCellComponent => {
         return {
           component: Badge,
           props: {
-            label: data.name,
+            label: data.nickName,
           },
         };
       },
-    },
-    {
-      field: 'age',
-      header: 'Age',
-      sortable: true,
     },
     {
       field: 'email',
@@ -66,31 +61,16 @@ const tableColumns = computed<TableColumn[]>(() => {
       fixed: true,
     },
     {
-      field: 'address.country',
-      header: 'Cuntry',
-      sortable: true,
-    },
-    {
-      field: 'address.city',
-      header: 'City',
-      sortable: true,
-    },
-    {
-      field: 'address.street',
-      header: 'Street',
-      sortable: true,
-    },
-    {
-      field: 'profile.interests',
-      header: 'Interest',
+      field: 'teams',
+      header: 'Teams',
       sortable: false,
-      bodyComponent: (data: User): TableCellComponent => {
+      bodyComponent: (data: Member): TableCellComponent => {
         return {
           component: BadgeGroup,
           props: {
-            labels: data.profile.interests,
+            labels: data.teams,
             limit: 2,
-            headerLabel: 'Interest',
+            headerLabel: 'Teams',
           },
         };
       },
@@ -100,9 +80,9 @@ const tableColumns = computed<TableColumn[]>(() => {
 
 const getTableData = async (
   params: QueryParams,
-): Promise<FetchResponse<User> | undefined> => {
+): Promise<FetchResponse<Member> | undefined> => {
   try {
-    const { data } = await UserServices.getUsers(params);
+    const { data } = await MemberServices.getMembers(params);
 
     return data;
   } catch (error) {

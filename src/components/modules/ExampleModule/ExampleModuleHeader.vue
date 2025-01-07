@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, shallowRef } from 'vue';
-import { User } from '@/types/user.type';
 import { MenuItem } from 'wangsvue/components/menuitem';
 import {
   ButtonBulkAction,
@@ -8,9 +7,10 @@ import {
   ButtonFilter,
   ButtonSearch,
 } from 'wangsvue';
+import { Member } from 'wangsit-api-services/src/types/memberService.type';
 import DialogDeleteUser from './DialogDeleteUser/DialogDeleteUser.vue';
 
-const dataSelected = ref<User[]>([]);
+const dataSelected = ref<Member[]>([]);
 const showDeleteUserDialog = shallowRef(false);
 
 const bulkAction: MenuItem[] = [
