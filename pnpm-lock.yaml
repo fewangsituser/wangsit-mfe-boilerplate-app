@@ -23,6 +23,9 @@ importers:
       postcss:
         specifier: 8.4.41
         version: 8.4.41
+      single-spa:
+        specifier: ^6.0.3
+        version: 6.0.3
       single-spa-vue:
         specifier: 3.0.0
         version: 3.0.0
@@ -39,11 +42,11 @@ importers:
         specifier: 4.4.3
         version: 4.4.3(vue@3.4.37(typescript@5.5.4))
       wangsvue:
-        specifier: ^1.5.165
-        version: 1.5.165
+        specifier: ^1.5.176
+        version: 1.5.176
       wangsvue-presets:
-        specifier: ^1.0.76
-        version: 1.0.76
+        specifier: ^1.0.78
+        version: 1.0.78
     devDependencies:
       '@cypress/code-coverage':
         specifier: 3.12.44
@@ -4667,6 +4670,9 @@ packages:
   single-spa-vue@3.0.0:
     resolution: {integrity: sha512-aw4KzaELuWo5pev117C0kSPtcj96vVbml+VssIKKs1aSGv2zA1nBK/mW/jlU8J1jEHlvxadBrDNDANVpqPrHxQ==}
 
+  single-spa@6.0.3:
+    resolution: {integrity: sha512-pXlwHXHhs3hx/MnGQHBLdFCVAN2rlm9TLBKazbDMyZ25QRxoen2vlUZ47MyXKa9K8Gd5UZs/gkuQad4TGbViwg==}
+
   sirv@2.0.4:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
@@ -5191,11 +5197,11 @@ packages:
     engines: {node: '>=12.0.0'}
     hasBin: true
 
-  wangsvue-presets@1.0.76:
-    resolution: {integrity: sha512-H7z1lbZhf0mO3PfcQIkxeIKgPG+Xip4YjHlzq5L7g/XUGpxCJhIw0GcojczlNVV99R6/l9kwV2lRtgsYmkKlew==}
+  wangsvue-presets@1.0.78:
+    resolution: {integrity: sha512-CYl/HMAxwVLJIhVbWiQ4pJ0/NMV+TkaOEyNtOiz3CseQbQmhOi2vL5bMDgHxi5CGO9TwsGXL0LkjWhaGyBu/Zg==}
 
-  wangsvue@1.5.165:
-    resolution: {integrity: sha512-X2KhgcQ2/lnI+PQHfH2E/HmDv+hh/TkZRM48piiMEJSyUgNONT43UATCL8pb3qvoSdiurcv7PF35swwzoge0lw==}
+  wangsvue@1.5.176:
+    resolution: {integrity: sha512-++nuno8QubNs+y2wa4ph578hNHtxU4oSJKRaFrrUFpTcBxfSWV/Nzey06vVH9v6VcrP19p2gUnUkxmhFmyBhHA==}
 
   watchpack@2.4.1:
     resolution: {integrity: sha512-8wrBCMtVhqcXP2Sup1ctSkga6uc2Bx0IIvKyT7yTFier5AXHooSI+QyQQAtTb7+E0IUCCKyTFmXqdqgum2XWGg==}
@@ -10439,6 +10445,8 @@ snapshots:
 
   single-spa-vue@3.0.0: {}
 
+  single-spa@6.0.3: {}
+
   sirv@2.0.4:
     dependencies:
       '@polka/url': 1.0.0-next.25
@@ -11032,9 +11040,9 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  wangsvue-presets@1.0.76: {}
+  wangsvue-presets@1.0.78: {}
 
-  wangsvue@1.5.165: {}
+  wangsvue@1.5.176: {}
 
   watchpack@2.4.1:
     dependencies:

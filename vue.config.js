@@ -16,7 +16,17 @@ module.exports = defineConfig({
       },
     },
     devServer: {
-      port: 8090,
+      port: 8080,
+      liveReload: false,
+      hot: false,
     },
+    externals: [
+      'vue',
+      'vue-router',
+      'axios',
+      'single-spa-vue',
+      'single-spa',
+      'wangsvue',
+    ],
   },
 });

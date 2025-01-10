@@ -23,13 +23,14 @@
     "axios": "1.7.3",
     "core-js": "3.38.0",
     "postcss": "8.4.41",
+    "single-spa": "^6.0.3",
     "single-spa-vue": "3.0.0",
     "systemjs-webpack-interop": "2.3.7",
     "tailwindcss": "3.4.9",
     "vue": "3.4.37",
     "vue-router": "4.4.3",
-    "wangsvue": "^1.5.165",
-    "wangsvue-presets": "^1.0.76"
+    "wangsvue": "^1.5.176",
+    "wangsvue-presets": "^1.0.78"
   },
   "devDependencies": {
     "@cypress/code-coverage": "3.12.44",
