@@ -42,11 +42,11 @@ importers:
         specifier: 4.4.3
         version: 4.4.3(vue@3.4.37(typescript@5.5.4))
       wangsvue:
-        specifier: ^1.5.176
-        version: 1.5.176
+        specifier: ^1.5.178
+        version: 1.5.178
       wangsvue-presets:
-        specifier: ^1.0.78
-        version: 1.0.78
+        specifier: ^1.0.79
+        version: 1.0.79
     devDependencies:
       '@cypress/code-coverage':
         specifier: 3.12.44
@@ -5197,11 +5197,11 @@ packages:
     engines: {node: '>=12.0.0'}
     hasBin: true
 
-  wangsvue-presets@1.0.78:
-    resolution: {integrity: sha512-CYl/HMAxwVLJIhVbWiQ4pJ0/NMV+TkaOEyNtOiz3CseQbQmhOi2vL5bMDgHxi5CGO9TwsGXL0LkjWhaGyBu/Zg==}
+  wangsvue-presets@1.0.79:
+    resolution: {integrity: sha512-kmsSw/cGPjYWZea60ujSwMMXfJrk1bYsyONO6uaQbaow5HXARU5IfB08eOPUa8T+LdJxf3GETrFsLZ/EwubLvQ==}
 
-  wangsvue@1.5.176:
-    resolution: {integrity: sha512-++nuno8QubNs+y2wa4ph578hNHtxU4oSJKRaFrrUFpTcBxfSWV/Nzey06vVH9v6VcrP19p2gUnUkxmhFmyBhHA==}
+  wangsvue@1.5.178:
+    resolution: {integrity: sha512-rBF5uwDVh8+//n0kwz3jVnziBH1I5vbfE74dLaqyjlsqW7/E6nGqhBUc+FHHN6gNhdEdd+mHEgF3mmbZclS7lw==}
 
   watchpack@2.4.1:
     resolution: {integrity: sha512-8wrBCMtVhqcXP2Sup1ctSkga6uc2Bx0IIvKyT7yTFier5AXHooSI+QyQQAtTb7+E0IUCCKyTFmXqdqgum2XWGg==}
@@ -11040,9 +11040,9 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  wangsvue-presets@1.0.78: {}
+  wangsvue-presets@1.0.79: {}
 
-  wangsvue@1.5.176: {}
+  wangsvue@1.5.178: {}
 
   watchpack@2.4.1:
     dependencies:
