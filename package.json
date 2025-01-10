@@ -1,5 +1,5 @@
 {
-  "name": "wangsit-mfe-boilerplate-app",
+  "name": "@fewangsit/mfe-boilerplate-app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
