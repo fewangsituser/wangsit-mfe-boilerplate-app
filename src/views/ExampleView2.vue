@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import { onMounted, shallowRef } from 'vue';
+import { onMounted } from 'vue';
 import { useBreadcrumbStore } from '@/store';
+import { BreadcrumbMenu } from 'wangsvue/components/breadcrumb/Breadcrumb.vue';
 
 const { setBreadcrumbs } = useBreadcrumbStore();
 
-const menus = shallowRef([
+const menus: BreadcrumbMenu[] = [
   {
     name: 'Wangs',
   },
   {
     name: 'Another Page',
   },
-]);
+];
 
 onMounted(() => {
-  setBreadcrumbs(menus.value);
+  setBreadcrumbs(menus);
 });
 </script>
 <template>
