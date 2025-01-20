@@ -1,7 +1,5 @@
-import { GetOptionsParams } from '@/dto/user.dto';
 import { FilterField } from 'wangsvue/components/filtercontainer/FilterContainer.vue.d';
 import { MultiSelectOption } from 'wangsvue/types/options.type';
-import UserServices from '@/services/example.service';
 
 export const quickFilterFields: FilterField[] = [
   {
@@ -9,12 +7,9 @@ export const quickFilterFields: FilterField[] = [
     field: 'country',
     type: 'multiselect',
     placeholder: 'Select country',
-    fetchOptionFn: async (
-      params: GetOptionsParams,
-    ): Promise<MultiSelectOption[]> => {
+    fetchOptionFn: async (): Promise<MultiSelectOption[]> => {
       try {
-        const { data } = await UserServices.getOptions(params);
-        return data.data.country;
+        return [{ label: 'Indonesia' }];
       } catch (error) {
         console.error(error);
         return [];
@@ -35,12 +30,9 @@ export const filterFields: FilterField[] = [
     field: 'country',
     type: 'multiselect',
     placeholder: 'Select country',
-    fetchOptionFn: async (
-      params: GetOptionsParams,
-    ): Promise<MultiSelectOption[]> => {
+    fetchOptionFn: async (): Promise<MultiSelectOption[]> => {
       try {
-        const { data } = await UserServices.getOptions(params);
-        return data.data.country;
+        return [{ label: 'Indonesia' }];
       } catch (error) {
         console.error(error);
         return [];

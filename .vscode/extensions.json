@@ -1,11 +1,7 @@
 {
   "recommendations": [
-    "Vue.vscode-typescript-vue-plugin",
     "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "SonarSource.sonarlint-vscode",
-    "DanielSanMedium.dscodegpt",
-    "eamodio.gitlens"
+    "esbenp.prettier-vscode"
   ]
 }
